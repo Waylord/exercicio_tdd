@@ -6,9 +6,14 @@ import java.time.format.DateTimeFormatter;
 public class Boleto {
 	private String codigoBoleto;
 	private LocalDate dataVencimento;
-	private float valor;
+	private double valor;
 	private DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		
+	
+	public Boleto(double valor, String dataVencimento) {
+		setDataVencimento(dataVencimento);
+		setValor(valor);
+	}
+	
 	public String getCodigoBoleto() {
 		return codigoBoleto;
 	}
@@ -25,11 +30,11 @@ public class Boleto {
 		this.dataVencimento = LocalDate.parse(dataVencimento, sdf);
 	}
 	
-	public float getValor() {
+	public double getValor() {
 		return valor;
 	}
 	
-	public void setValor(float valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 	
