@@ -18,6 +18,6 @@ public class TestBoleto {
 	@DisplayName("Testa se o boleto está pago")
 	public void testSeBoletoEstaPago() {
 		Boleto boleto = new Boleto(352.67, "15/03/2021");
-		assertFalse(boleto.estaPago());
+		assertFalse(boleto.getEstaPago());
 	}
 }
