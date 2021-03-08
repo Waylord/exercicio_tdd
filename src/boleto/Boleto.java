@@ -10,9 +10,10 @@ public class Boleto {
 	private DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	private boolean estaPago = false;
 	
-	public Boleto(double valor, String dataVencimento) {
+	public Boleto(double valor, String dataVencimento, String codigoBoleto) {
 		setDataVencimento(dataVencimento);
 		setValor(valor);
+		setCodigoBoleto(codigoBoleto);
 	}
 	
 	public String getCodigoBoleto() {
