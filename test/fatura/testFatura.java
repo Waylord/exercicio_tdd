@@ -6,7 +6,7 @@ import static org.junit.Assert.assertFalse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class testFatura {
+public class TestFatura {
 	@Test
 	@DisplayName("Verifica se está gerando a Fatura")
 	public void testNovaFatura() {
