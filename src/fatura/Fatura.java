@@ -8,6 +8,7 @@ public class Fatura {
 	private double valorTotalDaFatura;
 	private String nomeDoCliente;
 	private DateTimeFormatter sdf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	private boolean estaPago = false;
 	
 	public Fatura(double valorTotalDaFatura, String nomeDoCliente, String dataVencimento) {
 		setDataVencimento(dataVencimento);
@@ -39,5 +40,15 @@ public class Fatura {
 		this.nomeDoCliente = nomeDoCliente;
 	}
 	
+	public boolean getEstaPago() {
+		return this.estaPago;
+	}
 	
+	public void setPagaFatura() {
+		this.estaPago = true;
+	}
+	
+	public void setFaturaNaoPaga() {
+		this.estaPago = false;
+	}
 }
